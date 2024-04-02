@@ -2,6 +2,7 @@
     display: block;
     margin: 30px auto;
     width: 82%;
+    max-width: 1152px;
 }
 
 .shop-category-indexsort {
@@ -9,10 +10,13 @@
     margin: 0px 170px;
     justify-content: space-between;
     align-items: center;
+    max-width: 1152px;
+    margin: 0 auto;
 }
 
 .shop-category-indexsort p span {
     font-weight: 600;
+
 }
 
 .shop-category-sort {
@@ -23,6 +27,7 @@
 
 .shop-category-products {
     width: 82%;
+    max-width: 1152px;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
