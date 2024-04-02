@@ -1,14 +1,24 @@
-.item {
-    width: 350px;
-}
-
 .item p {
     margin: 6px 0;
 }
 
+
+
+.item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+
 .item-prices {
     display: flex;
     gap: 20px;
+}
+
+.item {
+    border-radius: 12px;
+
 }
 
 .item-price-new {
