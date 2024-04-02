@@ -2,7 +2,7 @@
     width: 65%;
     height: 60vh;
     display: flex;
-    margin: auto;
+    margin: 0 auto;
     align-items: center;
     border-radius: 12px;
     max-width: 1152px;
