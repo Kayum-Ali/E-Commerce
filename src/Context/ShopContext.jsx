@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import all_product from '../Components/Assetes/all_product'
 
+
 export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
@@ -16,12 +17,25 @@ const ShopContextProvider = (props) => {
 
     const addToCart = (itemId) => {
         setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
-        console.log(cartItem)
+
     }
     const removeFormCart = (itemId) => {
         setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     }
-    const ContextValue = { all_product, cartItem, addToCart, removeFormCart }
+
+
+    const getTotalCartAmount = () => {
+        let totalAmount = 0;
+        for (let item in cartItem) {
+            if (cartItem[item] > 0) {
+                let itemInfo = all_product.find((product) => product.id === Number(item));
+                totalAmount += itemInfo.new_price * cartItem[item];
+
+            }
+        }
+        return totalAmount;
+    }
+    const ContextValue = { all_product, getTotalCartAmount, cartItem, addToCart, removeFormCart }
 
     return (
         <ShopContext.Provider value={ContextValue}>
