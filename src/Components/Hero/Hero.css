@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    widows: 300px;
+    width: 300px;
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
@@ -63,4 +63,21 @@
 .hero-right img {
     width: 100%;
 
+}
+
+@media screen and (max-width: 576px) {
+    .hero-left {
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-right img {
+        width: 50%;
+    }
 }
